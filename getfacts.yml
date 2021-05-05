@@ -16,15 +16,15 @@
         src: templates/inventory_csv.yml
         dest: ./{{inventory_hostname}}.csv
 
-    - hosts: localhost
-      gather_facts: false
+- hosts: localhost
+  gather_facts: false
 
-      tasks:
-        - name: output all the keys in hostvars
-          debug:
-            var: hostvars.keys() | list
+  tasks:
+    - name: output all the keys in hostvars
+      debug:
+        var: hostvars.keys() | list
 
-        - name: output a unified CSV
-          template:
-            src: templates/combined_inventory_csv.yml
-            dest: ./combined_inventory.csv
+    - name: output a unified CSV
+      template:
+        src: templates/combined_inventory_csv.yml
+        dest: ./combined_inventory.csv
