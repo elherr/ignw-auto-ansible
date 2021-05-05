@@ -30,5 +30,9 @@ jobs:
           ANSIBLE_USER_GITHUB: ${{ secrets.ANSIBLE_USER_GITHUB }}
           ANSIBLE_PASSWORD_GITHUB: ${{ secrets.ANSIBLE_PASSWORD_GITHUB }}
         run: ansible-playbook -i hosts getfacts.yml
-
+      - name: Archive output csv 
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-csvs 
+          path: ./*.csv
 
