@@ -1,0 +1,2 @@
+hostname,serial_number
+{{ inventory_hostname }},{{ ansible_facts.net_serialnum }}
