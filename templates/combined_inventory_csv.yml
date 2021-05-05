@@ -1,0 +1,4 @@
+hostname,serial_number
+{% for hostname, values in hostvars.items() %}
+{{ hostname }},{{ values.ansible_facts.net_serialnum }}
+{% endfor %}
