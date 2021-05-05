@@ -11,3 +11,7 @@
         var: hostvars[inventory_hostname] 
     - debug:
         var: ansible_facts.net_serialnum
+    - name: output a csv
+      template:
+        src: templates/inventory_csv.yml
+        dest: ./{{inventory_hostname}}.csv
