@@ -1,0 +1,11 @@
+[all:vars]
+ansible_connection=ansible.netcommon.network_cli
+
+[Cisco]
+192.168.255.10
+192.168.255.11
+
+[Cisco:vars]
+ansible_network_os=ios
+ansible_user="{{ lookup('env','ANSIBLE_USER_GITHUB') }}"
+ansible_password="{{ lookup('env','ANSIBLE_PASSWORD_GITHUB') }}"
