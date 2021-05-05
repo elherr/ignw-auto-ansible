@@ -1,0 +1,13 @@
+---
+- hosts: Cisco
+  gather_facts: true
+
+  tasks:
+    - name: debug inventory_hostname
+      debug:
+        var: inventory_hostname
+    - name: output facts
+      debug:
+        var: hostvars[inventory_hostname] 
+    - debug:
+        var: ansible_facts.net_serialnum
