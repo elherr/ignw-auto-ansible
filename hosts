@@ -1,5 +1,5 @@
 [all:vars]
-ansible_connection=ansible.netcommon.network_cli
+ansible_connection=network_cli
 
 [Cisco]
 192.168.255.10
